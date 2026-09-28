@@ -1,11 +1,12 @@
 __pycache__/
 *.py[cod]
+*.egg-info/
 .pytest_cache/
 .venv/
 .offload/
 outputs/
 data/
-models/
+/models/
 logs/
 configs/generated/
 *.pt
