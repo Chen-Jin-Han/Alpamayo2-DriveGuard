@@ -36,4 +36,3 @@ def save_comparison(
     fig.tight_layout()
     fig.savefig(path, dpi=150)
     plt.close(fig)
-

@@ -14,4 +14,3 @@ class InferenceOutput:
     trajectory: torch.Tensor
     visual_features: torch.Tensor
     extra: dict[str, Any] = field(default_factory=dict)
-

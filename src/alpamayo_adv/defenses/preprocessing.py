@@ -36,4 +36,3 @@ def jpeg_compress(frames: torch.Tensor, quality: int = 75) -> torch.Tensor:
             restored_camera.append(torch.from_numpy(decoded).permute(2, 0, 1))
         restored.append(torch.stack(restored_camera))
     return torch.stack(restored).to(frames.device)
-

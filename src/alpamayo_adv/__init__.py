@@ -3,4 +3,3 @@
 from .types import InferenceOutput
 
 __all__ = ["InferenceOutput"]
-
