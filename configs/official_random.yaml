@@ -1,0 +1,21 @@
+backend: official
+device: cuda
+device_map: auto
+offload_folder: .offload/alpamayo2
+max_memory:
+  0: 18GiB
+  cpu: 400GiB
+seed: 42
+model_id: nvidia/Alpamayo2-Super
+diffusion_steps: 10
+data:
+  source: synthetic
+  height: 224
+  width: 384
+attack:
+  name: random
+  epsilon: "16/255"
+  attacked_cameras: [0, 1, 2, 3, 4, 5]
+objective: {feature: 1.0, trajectory: 1.0, temporal: 0.0}
+defense: {name: none}
+output_dir: outputs/official_synthetic_random

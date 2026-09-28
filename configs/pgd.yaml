@@ -1,0 +1,14 @@
+backend: mock
+device: cpu
+seed: 42
+mock_data: {cameras: 6, frames: 4, height: 96, width: 160}
+attack:
+  name: pgd
+  epsilon: "16/255"
+  step_size: "2/255"
+  iterations: 10
+  random_start: true
+  attacked_cameras: [0, 1, 2, 3, 4, 5]
+objective: {feature: 1.0, trajectory: 1.0, temporal: 0.0}
+defense: {name: none}
+output_dir: outputs/pgd

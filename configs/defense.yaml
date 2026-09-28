@@ -1,0 +1,13 @@
+backend: mock
+device: cpu
+seed: 42
+mock_data: {cameras: 6, frames: 4, height: 96, width: 160}
+attack:
+  name: temporal
+  epsilon: "16/255"
+  step_size: "2/255"
+  iterations: 10
+  shared_across_cameras: false
+objective: {feature: 1.0, trajectory: 1.0, temporal: 0.5}
+defense: {name: temporal_smoothing, alpha: 0.5}
+output_dir: outputs/defense

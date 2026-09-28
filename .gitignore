@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.offload/
+outputs/
+data/
+models/
+logs/
+configs/generated/
+*.pt
+*.pth
+*.safetensors
+.coverage
+.env

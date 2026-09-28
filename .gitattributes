@@ -1,0 +1,7 @@
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pt filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+*.safetensors filter=lfs diff=lfs merge=lfs -text

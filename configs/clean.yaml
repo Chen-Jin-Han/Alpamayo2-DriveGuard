@@ -1,0 +1,8 @@
+backend: mock
+device: cpu
+seed: 42
+mock_data: {cameras: 6, frames: 4, height: 96, width: 160}
+attack: {name: clean, epsilon: 0}
+objective: {feature: 1.0, trajectory: 1.0, temporal: 0.0}
+defense: {name: none}
+output_dir: outputs/clean

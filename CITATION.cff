@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use Alpamayo2-DriveGuard, please cite this repository."
+title: "Alpamayo2-DriveGuard"
+type: software
+authors:
+  - family-names: "Chen"
+    given-names: "Jin-Han"
+version: 0.1.0
+date-released: 2026-09-29
+repository-code: "https://github.com/Chen-Jin-Han/Alpamayo2-DriveGuard"
+license: Apache-2.0

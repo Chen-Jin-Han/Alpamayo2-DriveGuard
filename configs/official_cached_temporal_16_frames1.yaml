@@ -1,0 +1,19 @@
+backend: official
+device: cuda
+device_map: auto
+offload_folder: .offload/alpamayo2
+max_memory: {0: 18GiB, cpu: 400GiB}
+seed: 42
+model_id: nvidia/Alpamayo2-Super
+diffusion_steps: 10
+data: {source: cached, path: data/physicalai/validation_sample_0.pt}
+attack:
+  name: precomputed
+  label: temporal_resnet18_transfer_frames1
+  path: data/physicalai/attacks/temporal_eps16_frames1.pt
+  epsilon: "16/255"
+  attacked_cameras: [0, 1, 2, 3, 4, 5]
+  attacked_frames: [3]
+success_thresholds: {feature_distance: 0.05, reasoning_similarity: 0.8, trajectory_deviation: 0.5, ade_increase: 0.5, fde_increase: 1.0}
+defense: {name: none}
+output_dir: outputs/official_physicalai_temporal_16_frames1
