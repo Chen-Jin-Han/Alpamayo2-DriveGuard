@@ -40,4 +40,3 @@ class FeatureCapture(AbstractContextManager["FeatureCapture"]):
     def __exit__(self, *exc: Any) -> None:
         if self._handle is not None:
             self._handle.remove()
-
